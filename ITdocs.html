@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITdocs section</title> 
+    <link rel="icon" href="logo.JPG" type="image/icon type"> <!------ONLOAD HEDER LOGO-->
+    <link rel="stylesheet" href="style.css">
+    <!-----Created in mysql ajax and bootsrap 5-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- main body -->
+    <nav class="navbar justify-content-center fs-3 mb-3"> ITdocs Upload Center</nav>
+    <div class="container">
+        <div class="d-fle justify-content-between align-items-center mb-3">
+            <div class="text-body-secondary">
+                <span class="h5">All Documents</span>
+                <br>
+                Add New documents and Manage all your documents here
+            </div>
+            <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAdddocs">
+                <i class="fa fa-file-text" aria-hidden="true"></i>
+                Add new document
+              </button>
+              
+        </div>
+    </div>
+
+    <!-- adding a new documents crud -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAdddocs" style="width:600px;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">ADD NEW DOCUMENT</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- input form -->
+            <form id="insertform" method="post">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label"> Document Name</label>
+                        <input type="text" class="form-control" name="docname" placeholder="enter name">
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label"> Document Type</label>
+                        <input type="text" class="form-control" name="doctype" placeholder="PDF/WORD">
+                    </div>
+
+                    <div class="row mb-3">
+                        <label class="form-label"> Upload Document</label>
+                        <div class="col-2">
+                            <img class="preview_doc" src="preview.JPG">
+                        </div>
+                        <div class="col-10">
+                            <div class="file-upload text-secondary">
+                                <input type="file" class="documents" name="documents" accept=".doc, .docx, .pdf">
+                                <span class="fs-4 fw-">Choose File</span>
+                                <span> or drag and drop the file here</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label"> Uploader Name</label>
+                        <input type="text" class="form-control" name="upname" placeholder="PDF/WORD">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary me-1" id="inputbtn">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvasSubmit">Cancel</button>
+  
+                    </div>
+                    
+                </div>
+            </form>
+          
+        </div>
+      </div>
+
+    <!-- bootstrap links -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
